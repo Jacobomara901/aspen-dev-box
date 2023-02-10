@@ -122,28 +122,28 @@ CREATE TABLE `account_profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'ils',
   `driver` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `loginConfiguration` enum('barcode_pin','name_barcode') COLLATE utf8mb4_general_ci NOT NULL,
-  `authenticationMethod` enum('ils','sip2','db','ldap') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'ils',
+  `loginConfiguration` enum('barcode_pin','name_barcode') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'barcode_pin',
+  `authenticationMethod` enum('ils','sip2','db','ldap') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'db',
   `vendorOpacUrl` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `patronApiUrl` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `recordSource` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `recordSource` varchar(50) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'ils',
   `weight` int(11) NOT NULL,
-  `databaseHost` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `databaseName` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `databaseUser` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `databasePassword` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `databaseHost` varchar(100) COLLATE utf8mb4_general_ci,
+  `databaseName` varchar(50) COLLATE utf8mb4_general_ci,
+  `databaseUser` varchar(50) COLLATE utf8mb4_general_ci,
+  `databasePassword` varchar(50) COLLATE utf8mb4_general_ci,
   `sipHost` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `sipPort` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `sipUser` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `sipPassword` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `databasePort` varchar(5) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `databaseTimezone` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `databasePort` varchar(5) COLLATE utf8mb4_general_ci DEFAULT '3306',
+  `databaseTimezone` varchar(50) COLLATE utf8mb4_general_ci DEFAULT 'GMT',
   `oAuthClientId` varchar(36) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `oAuthClientSecret` varchar(36) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `ils` varchar(20) COLLATE utf8mb4_general_ci DEFAULT 'koha',
+  `ils` varchar(20) COLLATE utf8mb4_general_ci,
   `apiVersion` varchar(10) COLLATE utf8mb4_general_ci DEFAULT '',
-  `staffUsername` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `staffPassword` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `staffUsername` varchar(100) COLLATE utf8mb4_general_ci,
+  `staffPassword` varchar(50) COLLATE utf8mb4_general_ci,
   `workstationId` varchar(10) COLLATE utf8mb4_general_ci DEFAULT '',
   `domain` varchar(100) COLLATE utf8mb4_general_ci DEFAULT '',
   PRIMARY KEY (`id`),
@@ -6738,6 +6738,9 @@ CREATE TABLE `worldpay_settings` (
 LOCK TABLES `account_profiles` WRITE;
 /*!40000 ALTER TABLE `account_profiles` DISABLE KEYS */;
 INSERT INTO `account_profiles` VALUES (1,'admin','Library','barcode_pin','db','defaultURL','defaultURL','admin',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'library','',NULL,NULL,'','');
+
+INSERT INTO account_profiles(id,name,driver,loginConfiguration,authenticationMethod,vendorOpacUrl,patronApiUrl,recordSource,weight,databaseHost,databaseName,databaseUser,databasePassword,sipHost,sipPort,sipUser,sipPassword,databasePort,databaseTimezone,oAuthClientId,oAuthClientSecret,ils,apiVersion,staffUsername,staffPassword,workstationId,domain)
+VALUES(2,'ils','Koha','barcode_pin','ils','http://localhost:8080','http://localhost:8080','ils',0,'koha-db-1','koha_kohadev','koha_kohadev','password',NULL,NULL,NULL,NULL,3306,'GMT',NULL,NULL,'koha',NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `account_profiles` ENABLE KEYS */;
 UNLOCK TABLES;
 

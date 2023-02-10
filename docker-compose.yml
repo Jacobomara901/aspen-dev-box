@@ -1,16 +1,20 @@
 version: '3.3'
 services:
-    aspenselfcontained:
+    aspenselfcontained2:
         build:
-          dockerfile: $ASPEN_DOCKER/dockerfile
+          dockerfile: $ASPEN_DOCKER_2/dockerfile
         volumes:
-            - '$ASPEN_CLONE:/usr/local/aspen-discovery'
-            - '$ASPEN_DOCKER/site/:/usr/local/aspen-discovery/sites/test.localhostaspen'
+            - '$ASPEN_CLONE_2:/usr/local/aspen-discovery'
+            - '$ASPEN_DOCKER_2/site/:/usr/local/aspen-discovery/sites/test.localhostaspen'
+            - '$ASPEN_DOCKER_2/etc/apache2/sites-enabled:/etc/apache2/sites-enabled'
+            - '$ASPEN_DOCKER_2/data/aspen-discovery/test.localhostaspen:/data/aspen-discovery/test.localhostaspen'
+            - '$ASPEN_DOCKER_2/var/log/aspen-discovery:/var/log/aspen-discovery'
+            - '$ASPEN_DOCKER_2/site/conf/config.cron.ini:/etc/cron.d/test.localhostaspen'
         ports:
             - '8084:8080'
             - '8083:80'
-        container_name: containeraspen
-        image: aspendocker
+        container_name: containeraspen2
+        image: aspendocker2
         networks:
            external:
 
@@ -27,7 +31,7 @@ services:
             - MYSQL_TCP_PORT:7000
         image: 'mariadb:latest'
         volumes:
-          - $ASPEN_DOCKER/setup.sql:/docker-entrypoint-initdb.d/init-script.sql
+          - $ASPEN_DOCKER_2/setup.sql:/docker-entrypoint-initdb.d/init-script.sql
         networks:
           external:
 
