@@ -6739,10 +6739,78 @@ LOCK TABLES `account_profiles` WRITE;
 /*!40000 ALTER TABLE `account_profiles` DISABLE KEYS */;
 INSERT INTO `account_profiles` VALUES (1,'admin','Library','barcode_pin','db','defaultURL','defaultURL','admin',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'library','',NULL,NULL,'','');
 
-INSERT INTO account_profiles(id,name,driver,loginConfiguration,authenticationMethod,vendorOpacUrl,patronApiUrl,recordSource,weight,databaseHost,databaseName,databaseUser,databasePassword,sipHost,sipPort,sipUser,sipPassword,databasePort,databaseTimezone,oAuthClientId,oAuthClientSecret,ils,apiVersion,staffUsername,staffPassword,workstationId,domain)
-VALUES(2,'ils','Koha','barcode_pin','ils','http://localhost:8080','http://localhost:8080','ils',0,'koha-db-1','koha_kohadev','koha_kohadev','password',NULL,NULL,NULL,NULL,3306,'GMT',NULL,NULL,'koha',NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `account_profiles` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
+
+
+
+/*KOHA CONNECTION*/
+
+
+
+
+LOCK TABLES `account_profiles` WRITE;
+/*!40000 ALTER TABLE `account_profiles` DISABLE KEYS */;
+
+INSERT INTO account_profiles(id,name,driver,loginConfiguration,authenticationMethod,vendorOpacUrl,patronApiUrl,recordSource,weight,databaseHost,databaseName,databaseUser,databasePassword,sipHost,sipPort,sipUser,sipPassword,databasePort,databaseTimezone,oAuthClientId,oAuthClientSecret,ils,apiVersion,staffUsername,staffPassword,workstationId,domain)
+VALUES(2,'ils','Koha','barcode_pin','ils','http://koha-koha-1:8080','http://koha-koha-1:8080','ils',0,'koha-db-1','koha_kohadev','koha_kohadev','password',NULL,NULL,NULL,NULL,3306,'GMT',NULL,NULL,'koha',NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `account_profiles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `indexing_profiles`
+--
+
+LOCK TABLES `indexing_profiles` WRITE;
+/*!40000 ALTER TABLE `indexing_profiles` DISABLE KEYS */;
+INSERT INTO `indexing_profiles` (id, name, marcPath, marcEncoding, individualMarcPath, groupingClass, indexingClass, recordDriver, recordUrlComponent, formatSource, recordNumberTag, suppressItemlessBibs, itemTag, itemRecordNumber, useItemBasedCallNumbers, callNumber, location, shelvingLocation,collection, volume, barcode, totalCheckouts, totalRenewals, iType, dueDate, dateCreated, dateCreatedFormat, format, catalogDriver, filenamesToInclude, numCharsToCreateFolderFrom, createFolderFromLeadingCharacters, doAutomaticEcontentSuppression, recordNumberSubfield, recordNumberPrefix, noteSubfield, lastCheckinFormat) VALUES (1,'ils','/data/aspen-discovery/test.localhostaspen/ils/marc','UTF8','/data/aspen-discovery/test.localhostaspen/ils/marc_recs','MarcRecordGrouper','Koha','MarcRecordDriver','Record','item','999',1,'952','9',1,'o','a','c','8','h','p','l','m','y','k','d','yyyy-MM-dd','y','Koha','.*\\.ma?rc',4,0,1,'c', '', 'z', '');
+/*!40000 ALTER TABLE `indexing_profiles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+--
+-- Dumping data for table `library_records_to_include`
+--
+
+LOCK TABLES `library_records_to_include` WRITE;
+/*!40000 ALTER TABLE `library_records_to_include` DISABLE KEYS */;
+INSERT INTO `library_records_to_include` VALUES (1,1,1,'.*','.*',0,1,1,1,'','','','','',1,'','','','');
+/*!40000 ALTER TABLE `library_records_to_include` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `status_map_values`
+--
+
+LOCK TABLES `status_map_values` WRITE;
+/*!40000 ALTER TABLE `status_map_values` DISABLE KEYS */;
+INSERT INTO `status_map_values` (id, indexingProfileId, value, status, groupedStatus, suppress) VALUES (1,1,'Checked Out','Checked Out','Checked Out',0),(2,1,'Claims Returned','Claims Returned','Currently Unavailable',1),(3,1,'On Shelf','On Shelf','On Shelf',0),(4,1,'Damaged','Damaged','Currently Unavailable',1),(5,1,'In Transit','In Transit','In Transit',0),(6,1,'Library Use Only','Library Use Only','Library Use Only',0),(7,1,'Long Overdue (Lost)','Long Overdue (Lost)','Currently Unavailable',1),(8,1,'Lost','Lost','Currently Unavailable',1),(9,1,'Lost and Paid For','Lost and Paid For','Currently Unavailable',1),(10,1,'Missing','Missing','Currently Unavailable',1),(11,1,'On Hold Shelf','On Hold Shelf','Checked Out',0),(12,1,'On Order','On Order','On Order',0),(13,1,'Discard','Discard','Currently Unavailable',1),(14,1,'Lost Claim','Lost Claim','Currently Unavailable',1);
+/*!40000 ALTER TABLE `status_map_values` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `translation_maps`
+--
+
+LOCK TABLES `translation_maps` WRITE;
+/*!40000 ALTER TABLE `translation_maps` DISABLE KEYS */;
+INSERT INTO `translation_maps` VALUES (1,1,'location',0),(2,1,'sub_location',0),(3,1,'shelf_location',0),(5,1,'itype',0);
+/*!40000 ALTER TABLE `translation_maps` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+UPDATE modules set enabled = 1 where name = 'Koha';
+
+
+
+
+
+
+
+
+
 
 LOCK TABLES `browse_category` WRITE;
 /*!40000 ALTER TABLE `browse_category` DISABLE KEYS */;
@@ -6867,6 +6935,7 @@ UNLOCK TABLES;
 LOCK TABLES `themes` WRITE;
 /*!40000 ALTER TABLE `themes` DISABLE KEYS */;
 INSERT INTO `themes` VALUES (1,'default','','logoNameTL_Logo_final.png','#f1f1f1',1,'#303030',1,'<style type=\"text/css\">h1 small, h2 small, h3 small, h4 small, h5 small{color: #6B6B6B;}#header-wrapper{background-color: #f1f1f1;background-image: none;color: #303030;}#library-name-header{color: #303030;}#footer-container{background-color: #f1f1f1;color: #303030;}body {background-color: #ffffff;color: #6B6B6B;}a,a:visited,.result-head,#selected-browse-label a,#selected-browse-label a:visited{color: #3174AF;}a:hover,.result-head:hover,#selected-browse-label a:hover{color: #265a87;}body .container, #home-page-browse-content{background-color: #ffffff;color: #6B6B6B;}#selected-browse-label{background-color: #ffffff;}.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th{background-color: #fafafa;}.table-sticky thead tr th{background-color: #ffffff;}#home-page-search, #horizontal-search-box,.searchTypeHome,.searchSource,.menu-bar {background-color: #0a7589;color: #ffffff;}#horizontal-menu-bar-container{background-color: #f1f1f1;color: #303030;position: relative;}#horizontal-menu-bar-container, #horizontal-menu-bar-container .menu-icon, #horizontal-menu-bar-container .menu-icon .menu-bar-label,#horizontal-menu-bar-container .menu-icon:visited{background-color: #f1f1f1;color: #303030;}#horizontal-menu-bar-container .menu-icon:hover, #horizontal-menu-bar-container .menu-icon:focus,#horizontal-menu-bar-container .menu-icon:hover .menu-bar-label, #horizontal-menu-bar-container .menu-icon:focus .menu-bar-label,#menuToggleButton.selected{background-color: #f1f1f1;color: #265a87;}#horizontal-search-label,#horizontal-search-box #horizontal-search-label{color: #ffffff;}.dropdownMenu, #account-menu, #header-menu, .dropdown .dropdown-menu.dropdownMenu{background-color: #ededed;color: #404040;}.dropdownMenu a, .dropdownMenu a:visited{color: #404040;}.modal-header, .modal-footer{background-color: #ffffff;color: #333333;}.close, .close:hover, .close:focus{color: #333333;}.modal-header{border-bottom-color: #e5e5e5;}.modal-footer{border-top-color: #e5e5e5;}.modal-content{background-color: #ffffff;color: #333333;}.exploreMoreBar{border-color: #0a7589;background: #0a758907;}.exploreMoreBar .label-top, .exploreMoreBar .label-top img{background-color: #0a7589;color: #ffffff;}.exploreMoreBar .exploreMoreBarLabel{color: #ffffff;}#home-page-search-label,#home-page-advanced-search-link,#keepFiltersSwitchLabel,.menu-bar, #horizontal-menu-bar-container {color: #ffffff}.facetTitle, .exploreMoreTitle, .panel-heading, .panel-heading .panel-title,.panel-default > .panel-heading, .sidebar-links .panel-heading, #account-link-accordion .panel .panel-title, #account-settings-accordion .panel .panel-title{background-color: #e7e7e7;}.facetTitle, .exploreMoreTitle,.panel-title,.panel-default > .panel-heading, .sidebar-links .panel-heading, #account-link-accordion .panel .panel-title, #account-settings-accordion .panel .panel-title, .panel-title > a,.panel-default > .panel-heading{color: #333333;}.facetTitle.expanded, .exploreMoreTitle.expanded,.active .panel-heading,#more-details-accordion .active .panel-heading,.active .panel-default > .panel-heading, .sidebar-links .active .panel-heading, #account-link-accordion .panel.active .panel-title, #account-settings-accordion .panel.active .panel-title,.active .panel-title,.active .panel-title > a,.active.panel-default > .panel-heading, .adminSection .adminPanel .adminSectionLabel{background-color: #de9d03;}.facetTitle.expanded, .exploreMoreTitle.expanded,.active .panel-heading,#more-details-accordion .active .panel-heading,#more-details-accordion .active .panel-title,#account-link-accordion .panel.active .panel-title,.active .panel-title,.active .panel-title > a,.active.panel-default > .panel-heading,.adminSection .adminPanel .adminSectionLabel, .facetLock.pull-right a{color: #303030;}.panel-body,.sidebar-links .panel-body,#more-details-accordion .panel-body,.facetDetails,.sidebar-links .panel-body a:not(.btn), .sidebar-links .panel-body a:visited:not(.btn), .sidebar-links .panel-body a:hover:not(.btn),.adminSection .adminPanel{background-color: #ffffff;color: #404040;}.facetValue, .facetValue a,.adminSection .adminPanel .adminActionLabel,.adminSection .adminPanel .adminActionLabel a{color: #404040;}.breadcrumbs{background-color: #f5f5f5;color: #6B6B6B;}.breadcrumb > li + li::before{color: #6B6B6B;}#footer-container{border-top-color: #de1f0b;}#horizontal-menu-bar-container{border-bottom-color: #de1f0b;}#home-page-browse-header{background-color: #d7dce3;}.browse-category,#browse-sub-category-menu button{background-color: #0087AB !important;border-color: #0087AB !important;color: #ffffff !important;}.browse-category.selected,.browse-category.selected:hover,#browse-sub-category-menu button.selected,#browse-sub-category-menu button.selected:hover{border-color: #0087AB !important;background-color: #0087AB !important;color: #ffffff !important;}.btn-default,.btn-default:visited,a.btn-default,a.btn-default:visited{background-color: #ffffff;color: #333333;border-color: #cccccc;}.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default{background-color: #eeeeee;color: #333333;border-color: #cccccc;}.btn-primary,.btn-primary:visited,a.btn-primary,a.btn-primary:visited{background-color: #1b6ec2;color: #ffffff;border-color: #1b6ec2;}.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary{background-color: #ffffff;color: #1b6ec2;border-color: #1b6ec2;}.btn-action,.btn-action:visited,a.btn-action,a.btn-action:visited{background-color: #1b6ec2;color: #ffffff;border-color: #1b6ec2;}.btn-action:hover, .btn-action:focus, .btn-action:active, .btn-action.active, .open .dropdown-toggle.btn-action{background-color: #ffffff;color: #1b6ec2;border-color: #1b6ec2;}.btn-info,.btn-info:visited,a.btn-info,a.btn-info:visited{background-color: #8cd2e7;color: #000000;border-color: #999999;}.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info{background-color: #ffffff;color: #217e9b;border-color: #217e9b;}.btn-tools,.btn-tools:visited,a.btn-tools,a.btn-tools:visited{background-color: #747474;color: #ffffff;border-color: #636363;}.btn-tools:hover, .btn-tools:focus, .btn-tools:active, .btn-tools.active, .open .dropdown-toggle.btn-tools{background-color: #636363;color: #ffffff;border-color: #636363;}.btn-warning,.btn-warning:visited,a.btn-warning,a.btn-warning:visited{background-color: #f4d03f;color: #000000;border-color: #999999;}.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open .dropdown-toggle.btn-warning{background-color: #ffffff;color: #8d6708;border-color: #8d6708;}.label-warning{background-color: #f4d03f;color: #000000;}.btn-danger,.btn-danger:visited,a.btn-danger,a.btn-danger:visited{background-color: #D50000;color: #ffffff;border-color: #999999;}.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger{background-color: #ffffff;color: #D50000;border-color: #D50000;}.label-danger{background-color: #D50000;color: #ffffff;}.btn-editions,.btn-editions:visited{background-color: #f8f9fa;color: #212529;border-color: #999999;}.btn-editions:hover, .btn-editions:focus, .btn-editions:active, .btn-editions.active{background-color: #ffffff;color: #1b6ec2;border-color: #1b6ec2;}.badge{background-color: #666666;color: #ffffff;}#webMenuNavBar{background-color: #0a7589;margin-bottom: 2px;color: #ffffff;.navbar-nav > li > a, .navbar-nav > li > a:visited {color: #ffffff;}}.dropdown-menu{background-color: white;color: #6B6B6B;}.result-label{color: #44484a}.result-value{color: #6B6B6B}.search_tools{background-color: #f5f5f5;color: #6B6B6B;}</style>',NULL,NULL,'#ffffff',1,'#0a7589',1,'#ffffff',1,'#ffffff',1,'#6B6B6B',1,'#de9d03',1,'#303030',1,'#de1f0b',1,'#000000',1,NULL,1,NULL,1,NULL,0,NULL,NULL,'#d7dce3',1,'#0087AB',1,'#ffffff',1,'#0087AB',1,'#0087AB',1,'#ffffff',1,'#0087AB',1,'#f1f1f1',1,'#265a87',1,NULL,NULL,-1,'#ffffff',1,'#333333',1,'#cccccc',1,'#eeeeee',1,'#333333',1,'#cccccc',1,'#1b6ec2',1,'#ffffff',1,'#1b6ec2',1,'#ffffff',1,'#1b6ec2',1,'#1b6ec2',1,'#1b6ec2',1,'#ffffff',1,'#1b6ec2',1,'#ffffff',1,'#1b6ec2',1,'#1b6ec2',1,'#8cd2e7',1,'#000000',1,'#999999',1,'#ffffff',1,'#217e9b',1,'#217e9b',1,'#f4d03f',1,'#000000',1,'#999999',1,'#ffffff',1,'#8d6708',1,'#8d6708',1,'#D50000',1,'#ffffff',1,'#999999',1,'#ffffff',1,'#D50000',1,'#D50000',1,'#f8f9fa',1,'#212529',1,'#999999',1,'#ffffff',1,'#1b6ec2',1,'#1b6ec2',1,'#747474',1,'#ffffff',1,'#636363',1,'#636363',1,'#ffffff',1,'#636363',1,'#f1f1f1',1,'#303030',1,NULL,NULL,'#e7e7e7',1,'#333333',1,'#de9d03',1,'#303030',1,'#ffffff',1,'#404040',1,'#3174AF',1,'#265a87',1,'#666666',1,'#ffffff',1,NULL,'#44484a',1,'#6B6B6B',1,'#f5f5f5',1,'#6B6B6B',1,'#f5f5f5',1,'#e3e3e3',1,'#6B6B6B',1,'#f1f1f1',1,'#303030',1,'#ededed',1,'#404040',1,'#ffffff',1,'#333333',1,'#ffffff',1,'#333333',1,'#e5e5e5',1,NULL,'border');
+
 UPDATE themes set headerBackgroundColor = '#ffffff' where id = 1;
 UPDATE themes set browseCategoryPanelColor = '#ffffff' where id = 1;
 UPDATE themes set closedPanelBackgroundColor = '#ffffff' where id = 1;
@@ -6915,4 +6984,7 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-15  7:42:23
+
+
+
+

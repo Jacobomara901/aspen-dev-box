@@ -1,0 +1,820 @@
+[2023 Feb 10 16:34:06] curl post error for http://localhost:8080/cgi-bin/koha/ilsdi.pl: 
+[2023 Feb 10 16:34:06] curl post error for http://localhost:8080/cgi-bin/koha/ilsdi.pl: 
+[2023 Feb 10 16:34:06] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 10 16:34:06] Sorry that login information was not recognized, please try again.
+[2023 Feb 10 16:34:38] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.two_factor_auth_settings' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/PTypes
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/PTypes
+    [SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost:8083/Admin/AccountProfiles
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => CGISESSID=55b844154d910798efc6b991ea2ffa53; aspen_session=3gt7crjh2ol5jcso9oe0nbso7k
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 34308
+    [REDIRECT_URL] => /Admin/PTypes
+    [REDIRECT_QUERY_STRING] => module=Admin&action=PTypes
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=PTypes
+    [REQUEST_URI] => /Admin/PTypes
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676046877.9864
+    [REQUEST_TIME] => 1676046877
+)
+
+Backtrace:
+PDOStatement->execute  [117] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->find  [43] - /usr/local/aspen-discovery/code/web/sys/Account/PType.php<br/>PType::getObjectStructure  [41] - /usr/local/aspen-discovery/code/web/services/Admin/PTypes.php<br/>Admin_PTypes->getObjectStructure  [21] - /usr/local/aspen-discovery/code/web/services/Admin/ObjectEditor.php<br/>ObjectEditor->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 16:43:56] curl post error for http://localhost:8080/cgi-bin/koha/ilsdi.pl: 
+[2023 Feb 10 16:43:56] curl post error for http://localhost:8080/cgi-bin/koha/ilsdi.pl: 
+[2023 Feb 10 16:43:56] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 10 16:43:56] Sorry that login information was not recognized, please try again.
+[2023 Feb 10 16:59:35] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 10 16:59:35] Sorry that login information was not recognized, please try again.
+[2023 Feb 10 16:59:53] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ebscohostSearches' in 'field list'
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/UsageDashboard
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/UsageDashboard
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/UsageDashboard
+    [SCRIPT_URI] => http://localhost:8083/Admin/UsageDashboard
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost:8083/Admin/APIUsageDashboard
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => CGISESSID=55b844154d910798efc6b991ea2ffa53; aspen_session=3gt7crjh2ol5jcso9oe0nbso7k
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 59476
+    [REDIRECT_URL] => /Admin/UsageDashboard
+    [REDIRECT_QUERY_STRING] => module=Admin&action=UsageDashboard
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=UsageDashboard
+    [REQUEST_URI] => /Admin/UsageDashboard
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676048392.7268
+    [REQUEST_TIME] => 1676048392
+)
+
+Backtrace:
+PDOStatement->execute  [117] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->find  [87] - /usr/local/aspen-discovery/code/web/services/Admin/UsageDashboard.php<br/>Admin_UsageDashboard->getStats  [14] - /usr/local/aspen-discovery/code/web/services/Admin/UsageDashboard.php<br/>Admin_UsageDashboard->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 17:06:54] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 10 17:06:54] Sorry that login information was not recognized, please try again.
+[2023 Feb 10 17:07:00] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.search_update_log' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/SearchUpdateLog
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/SearchUpdateLog
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/SearchUpdateLog
+    [SCRIPT_URI] => http://localhost:8083/Admin/SearchUpdateLog
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost:8083/Admin/PerformanceReport
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => CGISESSID=55b844154d910798efc6b991ea2ffa53; aspen_session=3gt7crjh2ol5jcso9oe0nbso7k
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 47758
+    [REDIRECT_URL] => /Admin/SearchUpdateLog
+    [REDIRECT_QUERY_STRING] => module=Admin&action=SearchUpdateLog
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=SearchUpdateLog
+    [REQUEST_URI] => /Admin/SearchUpdateLog
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676048819.7794
+    [REQUEST_TIME] => 1676048819
+)
+
+Backtrace:
+PDOStatement->execute  [571] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->count  [17] - /usr/local/aspen-discovery/code/web/services/Admin/IndexingLog.php<br/>Admin_IndexingLog->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 17:07:03] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.search_update_log' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/SearchUpdateLog
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/SearchUpdateLog
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/SearchUpdateLog
+    [SCRIPT_URI] => http://localhost:8083/Admin/SearchUpdateLog
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost:8083/Admin/PerformanceReport
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => CGISESSID=55b844154d910798efc6b991ea2ffa53; aspen_session=3gt7crjh2ol5jcso9oe0nbso7k
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 47758
+    [REDIRECT_URL] => /Admin/SearchUpdateLog
+    [REDIRECT_QUERY_STRING] => module=Admin&action=SearchUpdateLog
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=SearchUpdateLog
+    [REQUEST_URI] => /Admin/SearchUpdateLog
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676048822.9149
+    [REQUEST_TIME] => 1676048822
+)
+
+Backtrace:
+PDOStatement->execute  [571] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->count  [17] - /usr/local/aspen-discovery/code/web/services/Admin/IndexingLog.php<br/>Admin_IndexingLog->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 17:40:37] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 10 17:40:37] Sorry that login information was not recognized, please try again.
+[2023 Feb 10 17:40:37] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.search_update_log' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/SearchUpdateLog
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/SearchUpdateLog
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/SearchUpdateLog
+    [SCRIPT_URI] => http://localhost:8083/Admin/SearchUpdateLog
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_REFERER] => http://localhost:8083/Admin/SearchUpdateLog
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => aspen_session=9q16cq0nenfmhcfd7etri6juh3
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 33638
+    [REDIRECT_URL] => /Admin/SearchUpdateLog
+    [REDIRECT_QUERY_STRING] => module=Admin&action=SearchUpdateLog
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=SearchUpdateLog
+    [REQUEST_URI] => /Admin/SearchUpdateLog
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676050837.3017
+    [REQUEST_TIME] => 1676050837
+)
+
+Backtrace:
+PDOStatement->execute  [571] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->count  [17] - /usr/local/aspen-discovery/code/web/services/Admin/IndexingLog.php<br/>Admin_IndexingLog->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 17:41:18] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.xpresspay_settings' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/Libraries
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/Libraries
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/Libraries
+    [SCRIPT_URI] => http://localhost:8083/Admin/Libraries
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost:8083/ILS/IndexingProfiles
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => aspen_session=9q16cq0nenfmhcfd7etri6juh3
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 44548
+    [REDIRECT_URL] => /Admin/Libraries
+    [REDIRECT_QUERY_STRING] => module=Admin&action=Libraries
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=Libraries
+    [REQUEST_URI] => /Admin/Libraries
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676050877.1282
+    [REQUEST_TIME] => 1676050877
+)
+
+Backtrace:
+PDOStatement->execute  [117] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->find  [537] - /usr/local/aspen-discovery/code/web/sys/LibraryLocation/Library.php<br/>Library::getObjectStructure  [46] - /usr/local/aspen-discovery/code/web/services/Admin/Libraries.php<br/>Admin_Libraries->getObjectStructure  [21] - /usr/local/aspen-discovery/code/web/services/Admin/ObjectEditor.php<br/>ObjectEditor->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 18:16:03] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 10 18:16:03] Sorry that login information was not recognized, please try again.
+[2023 Feb 10 18:16:38] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.course_reserve' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/BrowseCategories
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/BrowseCategories
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/BrowseCategories
+    [SCRIPT_URI] => http://localhost:8083/Admin/BrowseCategories
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost:8083/Admin/CollectionSpotlights
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => aspen_session=9q16cq0nenfmhcfd7etri6juh3
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 52916
+    [REDIRECT_URL] => /Admin/BrowseCategories
+    [REDIRECT_QUERY_STRING] => module=Admin&action=BrowseCategories
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=BrowseCategories
+    [REQUEST_URI] => /Admin/BrowseCategories
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676052998.2155
+    [REQUEST_TIME] => 1676052998
+)
+
+Backtrace:
+PDOStatement->execute  [117] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->find  [20] - /usr/local/aspen-discovery/code/web/sys/CourseReserves/CourseReserve.php<br/>CourseReserve::getSourceListsForBrowsingAndCarousels  [216] - /usr/local/aspen-discovery/code/web/sys/Browse/BrowseCategory.php<br/>BrowseCategory::getObjectStructure  [45] - /usr/local/aspen-discovery/code/web/services/Admin/BrowseCategories.php<br/>Admin_BrowseCategories->getObjectStructure  [21] - /usr/local/aspen-discovery/code/web/services/Admin/ObjectEditor.php<br/>ObjectEditor->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 18:16:54] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.two_factor_auth_settings' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/PTypes
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/PTypes
+    [SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost:8083/Admin/GroupedWorkDisplay
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => aspen_session=9q16cq0nenfmhcfd7etri6juh3
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 56002
+    [REDIRECT_URL] => /Admin/PTypes
+    [REDIRECT_QUERY_STRING] => module=Admin&action=PTypes
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=PTypes
+    [REQUEST_URI] => /Admin/PTypes
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676053014.7327
+    [REQUEST_TIME] => 1676053014
+)
+
+Backtrace:
+PDOStatement->execute  [117] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->find  [43] - /usr/local/aspen-discovery/code/web/sys/Account/PType.php<br/>PType::getObjectStructure  [41] - /usr/local/aspen-discovery/code/web/services/Admin/PTypes.php<br/>Admin_PTypes->getObjectStructure  [21] - /usr/local/aspen-discovery/code/web/services/Admin/ObjectEditor.php<br/>ObjectEditor->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 18:26:31] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 10 18:26:31] Sorry that login information was not recognized, please try again.
+[2023 Feb 10 18:26:32] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.two_factor_auth_settings' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/PTypes
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/PTypes
+    [SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_REFERER] => http://localhost:8083/Admin/PTypes
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => aspen_session=9q16cq0nenfmhcfd7etri6juh3
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 42272
+    [REDIRECT_URL] => /Admin/PTypes
+    [REDIRECT_QUERY_STRING] => module=Admin&action=PTypes
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=PTypes
+    [REQUEST_URI] => /Admin/PTypes
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676053591.3185
+    [REQUEST_TIME] => 1676053591
+)
+
+Backtrace:
+PDOStatement->execute  [117] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->find  [43] - /usr/local/aspen-discovery/code/web/sys/Account/PType.php<br/>PType::getObjectStructure  [41] - /usr/local/aspen-discovery/code/web/services/Admin/PTypes.php<br/>Admin_PTypes->getObjectStructure  [21] - /usr/local/aspen-discovery/code/web/services/Admin/ObjectEditor.php<br/>ObjectEditor->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 18:27:33] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.two_factor_auth_settings' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/PTypes
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/PTypes
+    [SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost:8083/ILS/TranslationMaps
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => aspen_session=9q16cq0nenfmhcfd7etri6juh3
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 54214
+    [REDIRECT_URL] => /Admin/PTypes
+    [REDIRECT_QUERY_STRING] => module=Admin&action=PTypes
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=PTypes
+    [REQUEST_URI] => /Admin/PTypes
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676053653.5463
+    [REQUEST_TIME] => 1676053653
+)
+
+Backtrace:
+PDOStatement->execute  [117] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->find  [43] - /usr/local/aspen-discovery/code/web/sys/Account/PType.php<br/>PType::getObjectStructure  [41] - /usr/local/aspen-discovery/code/web/services/Admin/PTypes.php<br/>Admin_PTypes->getObjectStructure  [21] - /usr/local/aspen-discovery/code/web/services/Admin/ObjectEditor.php<br/>ObjectEditor->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 10 18:37:16] Forcing Nightly Index because processRecordLinking on IndexingProfile - 1 was changed to 0 by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because customMarcFieldsToIndexAsKeyword on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because bCode3sToSuppress on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because callNumberPrestamp on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because callNumberCutter on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because callNumberPoststamp on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because nonHoldableLocations on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because locationsToSuppress on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because subLocation on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because itemUrl on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because status on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because nonHoldableStatuses on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because statusesToSuppress on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because treatLibraryUseOnlyGroupedStatusesAsAvailable on IndexingProfile - 1 was changed to 1 by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because lastYearCheckouts on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because yearToDateCheckouts on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because nonHoldableITypes on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because iTypesToSuppress on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because lastCheckinDate on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because iCode2 on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because iCode2sToSuppress on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because eContentDescriptor on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because fallbackFormatField on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because specifiedFormat on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because specifiedFormatCategory on IndexingProfile - 1 was changed to 0 by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because specifiedFormatBoost on IndexingProfile - 1 was changed to 1 by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because orderTag on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because orderStatus on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because orderLocationSingle on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because orderLocation on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because orderCopies on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because orderCode3 on IndexingProfile - 1 was changed to  by user 1
+[2023 Feb 10 18:37:16] Forcing Nightly Index because evergreenOrgUnitSchema on IndexingProfile - 1 was changed to 1 by user 1
+[2023 Feb 10 18:37:16] Failed to update indexing profile for ils
+[2023 Feb 14 09:49:01] Solr is not currently running
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Browse/AJAX
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Browse/AJAX
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Browse/AJAX
+    [SCRIPT_URI] => http://localhost:8083/Browse/AJAX
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => cors
+    [HTTP_SEC_FETCH_DEST] => empty
+    [HTTP_REFERER] => http://localhost:8083/
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => CGISESSID=b4317bc62e3500a2b671fccf5bd6f329; aspen_session=mf4k60ek0frdobdukmj81jpgch
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 36354
+    [REDIRECT_URL] => /Browse/AJAX
+    [REDIRECT_QUERY_STRING] => module=Browse&action=AJAX&method=getBrowseCategoryInfo&textId=main_new_fiction&browseMode=covers
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Browse&action=AJAX&method=getBrowseCategoryInfo&textId=main_new_fiction&browseMode=covers
+    [REQUEST_URI] => /Browse/AJAX?method=getBrowseCategoryInfo&textId=main_new_fiction&browseMode=covers
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676368141.5703
+    [REQUEST_TIME] => 1676368141
+)
+
+Backtrace:
+AspenError->__construct  [141] - /usr/local/aspen-discovery/code/web/sys/AspenError.php<br/>AspenError::raiseError  [2004] - /usr/local/aspen-discovery/code/web/sys/SolrConnector/Solr.php<br/>Solr->loadValidFields  [631] - /usr/local/aspen-discovery/code/web/sys/SearchObject/GroupedWorkSearcher2.php<br/>SearchObject_GroupedWorkSearcher2->getScopedFieldName  [218] - /usr/local/aspen-discovery/code/web/sys/SearchObject/BaseSearcher.php<br/>SearchObject_BaseSearcher->addFilter  [559] - /usr/local/aspen-discovery/code/web/services/Browse/AJAX.php<br/>Browse_AJAX->getBrowseCategoryResults  [764] - /usr/local/aspen-discovery/code/web/services/Browse/AJAX.php<br/>Browse_AJAX->getBrowseCategoryInfo  [25] - /usr/local/aspen-discovery/code/web/services/Browse/AJAX.php<br/>Browse_AJAX->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 14 10:10:10] Solr is not currently running
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Browse/AJAX
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Browse/AJAX
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Browse/AJAX
+    [SCRIPT_URI] => http://localhost:8083/Browse/AJAX
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_ACCEPT] => application/json, text/javascript, */*; q=0.01
+    [HTTP_X_REQUESTED_WITH] => XMLHttpRequest
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => cors
+    [HTTP_SEC_FETCH_DEST] => empty
+    [HTTP_REFERER] => http://localhost:8083/
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => CGISESSID=b4317bc62e3500a2b671fccf5bd6f329; aspen_session=mf4k60ek0frdobdukmj81jpgch
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 37038
+    [REDIRECT_URL] => /Browse/AJAX
+    [REDIRECT_QUERY_STRING] => module=Browse&action=AJAX&method=getBrowseCategoryInfo&textId=main_new_fiction&browseMode=covers
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Browse&action=AJAX&method=getBrowseCategoryInfo&textId=main_new_fiction&browseMode=covers
+    [REQUEST_URI] => /Browse/AJAX?method=getBrowseCategoryInfo&textId=main_new_fiction&browseMode=covers
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676369410.2357
+    [REQUEST_TIME] => 1676369410
+)
+
+Backtrace:
+AspenError->__construct  [141] - /usr/local/aspen-discovery/code/web/sys/AspenError.php<br/>AspenError::raiseError  [2004] - /usr/local/aspen-discovery/code/web/sys/SolrConnector/Solr.php<br/>Solr->loadValidFields  [631] - /usr/local/aspen-discovery/code/web/sys/SearchObject/GroupedWorkSearcher2.php<br/>SearchObject_GroupedWorkSearcher2->getScopedFieldName  [218] - /usr/local/aspen-discovery/code/web/sys/SearchObject/BaseSearcher.php<br/>SearchObject_BaseSearcher->addFilter  [559] - /usr/local/aspen-discovery/code/web/services/Browse/AJAX.php<br/>Browse_AJAX->getBrowseCategoryResults  [764] - /usr/local/aspen-discovery/code/web/services/Browse/AJAX.php<br/>Browse_AJAX->getBrowseCategoryInfo  [25] - /usr/local/aspen-discovery/code/web/services/Browse/AJAX.php<br/>Browse_AJAX->launch  [774] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 14 10:10:46] ILS-DI is disabled
+[2023 Feb 14 10:10:46] ILS-DI is disabled
+[2023 Feb 14 10:10:46] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 14 10:10:46] Sorry that login information was not recognized, please try again.
+[2023 Feb 14 10:22:22] ILS-DI is disabled
+[2023 Feb 14 10:22:22] ILS-DI is disabled
+[2023 Feb 14 10:22:22] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 14 10:22:22] Sorry that login information was not recognized, please try again.
+[2023 Feb 14 13:00:02] ILS-DI is disabled
+[2023 Feb 14 13:00:02] ILS-DI is disabled
+[2023 Feb 14 13:00:02] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 14 13:00:02] Sorry that login information was not recognized, please try again.
+[2023 Feb 14 13:00:26] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aspen.two_factor_auth_settings' doesn't exist
+Server Context:
+Array
+(
+    [REDIRECT_SCRIPT_URL] => /Admin/PTypes
+    [REDIRECT_SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [REDIRECT_aspen_server] => test.localhostaspen
+    [REDIRECT_STATUS] => 200
+    [SCRIPT_URL] => /Admin/PTypes
+    [SCRIPT_URI] => http://localhost:8083/Admin/PTypes
+    [aspen_server] => test.localhostaspen
+    [HTTP_HOST] => localhost:8083
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_SEC_CH_UA] => "Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Linux"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost:8083/Admin/AccountProfiles
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en-US;q=0.9,en;q=0.8
+    [HTTP_COOKIE] => CGISESSID=b4317bc62e3500a2b671fccf5bd6f329; aspen_session=mf4k60ek0frdobdukmj81jpgch
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.38 (Debian) Server at localhost Port 8083</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.38 (Debian)
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => 172.18.0.6
+    [SERVER_PORT] => 8083
+    [REMOTE_ADDR] => 172.18.0.1
+    [DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /usr/local/aspen-discovery/code/web
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /usr/local/aspen-discovery/code/web/index.php
+    [REMOTE_PORT] => 60062
+    [REDIRECT_URL] => /Admin/PTypes
+    [REDIRECT_QUERY_STRING] => module=Admin&action=PTypes
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => module=Admin&action=PTypes
+    [REQUEST_URI] => /Admin/PTypes
+    [SCRIPT_NAME] => /index.php
+    [PHP_SELF] => /index.php
+    [REQUEST_TIME_FLOAT] => 1676379626.5604
+    [REQUEST_TIME] => 1676379626
+)
+
+Backtrace:
+PDOStatement->execute  [117] - /usr/local/aspen-discovery/code/web/sys/DB/DataObject.php<br/>DataObject->find  [38] - /usr/local/aspen-discovery/code/web/sys/Account/PType.php<br/>PType::getObjectStructure  [41] - /usr/local/aspen-discovery/code/web/services/Admin/PTypes.php<br/>Admin_PTypes->getObjectStructure  [19] - /usr/local/aspen-discovery/code/web/services/Admin/ObjectEditor.php<br/>ObjectEditor->launch  [737] - /usr/local/aspen-discovery/code/web/index.php<br/>
+[2023 Feb 14 13:08:33] ILS-DI is disabled
+[2023 Feb 14 13:08:33] ILS-DI is disabled
+[2023 Feb 14 13:08:33] Error authenticating patron aspen_admin for driver ils
+
+[2023 Feb 14 13:08:33] Sorry that login information was not recognized, please try again.

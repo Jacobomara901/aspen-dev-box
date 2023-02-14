@@ -22,7 +22,7 @@
 #############
 # Indexing Tasks #
 #############
-@reboot       solr    php /usr/local/aspen-discovery/code/web/cron/checkSolr.php test.localhostaspen
+* * * * *     solr    php /usr/local/aspen-discovery/code/web/cron/checkSolr.php test.localhostaspen
 5 2 * * *     solr   php /usr/local/aspen-discovery/code/web/cron/updateSuggesters.php test.localhostaspen
 7 3 * * *     aspen   php /usr/local/aspen-discovery/code/web/cron/createSitemaps.php test.localhostaspen
 */2 * * * *   solr    php /usr/local/aspen-discovery/code/web/cron/checkSolr.php test.localhostaspen
@@ -31,8 +31,8 @@
 ########################################################
 # Regular extracts that don't need to run continuously #
 ########################################################
-0 2 * * *     aspen   cd /usr/local/aspen-discovery/code/oai_indexer; java -jar oai_indexer.jar test.localhostaspen
-0 2 * * *     aspen   cd /usr/local/aspen-discovery/code/reindexer; java -jar reindexer.jar test.localhostaspen nightly
+*/2 * * * *     aspen   cd /usr/local/aspen-discovery/code/oai_indexer; java -jar oai_indexer.jar test.localhostaspen
+*/2 * * * *     aspen   cd /usr/local/aspen-discovery/code/reindexer; java -jar reindexer.jar test.localhostaspen nightly
 
 ######################
 # MySQL Nightly Dump #
@@ -83,3 +83,13 @@
 # Send Custom LiDA Notifications #
 #########################
 */15 * * * * aspen php /usr/local/aspen-discovery/code/web/cron/sendLiDANotifications.php test.localhostaspen
+
+
+#########################
+# TEST RUNNING KOHA EXPORT #
+#########################
+
+*/2 * * * * aspen  cd /usr/local/aspen-discovery/code/koha_export && java -jar koha_export.jar test.localhostaspen
+*/1 * * * * /bin/echo -e "cron working" >> /var/log/aspen-discovery/test.localhostaspen/cron.log;
+
+

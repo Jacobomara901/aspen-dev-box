@@ -35,27 +35,25 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8
 
-ENV LANG en_US.UTF-8 
-ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8 \
+    LC_ALL en_US.UTF-8
 
 #Add php repo
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
     && sh -c 'echo "deb https://packages.sury.org/php/ buster main" > /etc/apt/sources.list.d/php.list'
 
-
-
 #Install php deps
 RUN apt -y update \
     && apt install -y \
-      php8.0 \
-      php8.0-mcrypt \
-      php8.0-gd \
-      php8.0-curl \
-      php8.0-mysql \
-      php8.0-zip \
-      php8.0-xml \
-      php8.0-intl \
-      php8.0-mbstring \
+      php7.3 \
+      php7.3-mcrypt \
+      php7.3-gd \
+      php7.3-curl \
+      php7.3-mysql \
+      php7.3-zip \
+      php7.3-xml \
+      php7.3-intl \
+      php7.3-mbstring \
     && rm -rf /var/cache/apt/archives/* \
     && rm -rf /var/lib/apt/lists/*
 
@@ -69,7 +67,7 @@ RUN a2enmod rewrite
 
 # Add aspen-discovery
 RUN cd /usr/local \
-    && git clone --depth=1 -b 23.01.00 https://github.com/mdnoble73/aspen-discovery.git \
+    && git clone --depth=1 -b 22.12.00 https://github.com/mdnoble73/aspen-discovery.git \
     && rm -rf ./aspen-discovery/.git
 
 # Create temp smarty directories

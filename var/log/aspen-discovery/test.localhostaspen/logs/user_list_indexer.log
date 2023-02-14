@@ -1,0 +1,608 @@
+[main] INFO  02/10 14:07:42,080 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 14:07:42,092 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 14:07:42,093 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 14:07:42,094 - Starting Reindex for test.localhostaspen
+[main] INFO  02/10 14:07:42,095 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 14:07:42,097 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 14:07:42,098 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 14:07:42,099 - Setting up database connections
+[main] INFO  02/10 14:07:42,261 - Deleted 0 old log entries
+[main] DEBUG 02/10 14:07:42,431 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 14:07:42,459 - Error loading search version
+java.sql.SQLSyntaxErrorException: Unknown column 'searchVersion' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:78) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] DEBUG 02/10 14:07:42,462 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] DEBUG 02/10 14:07:42,464 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 14:07:42,474 - Error setting up scopes
+java.sql.SQLSyntaxErrorException: Unknown column 'courseReserveLibrariesToInclude' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadLibraryScopes(IndexingUtils.java:541) ~[user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadScopes(IndexingUtils.java:32) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:95) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] INFO  02/10 14:07:42,474 - Reindexing lists
+[main] DEBUG 02/10 14:07:42,489 - CookieSpec selected: default
+[main] DEBUG 02/10 14:07:42,493 - Auth cache not set in the context
+[main] DEBUG 02/10 14:07:42,495 - Connection request: [route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 0; route allocated: 0 of 10000; total allocated: 0 of 10000]
+[main] DEBUG 02/10 14:07:42,502 - Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 14:07:42,503 - Opening connection {}->http://localhost:8080
+[main] DEBUG 02/10 14:07:42,505 - Connecting to localhost/127.0.0.1:8080
+[main] DEBUG 02/10 14:07:42,506 - Connection established 127.0.0.1:58262<->127.0.0.1:8080
+[main] DEBUG 02/10 14:07:42,506 - http-outgoing-0: set socket timeout to 600000
+[main] DEBUG 02/10 14:07:42,507 - Executing request POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 14:07:42,507 - Target auth state: UNCHALLENGED
+[main] DEBUG 02/10 14:07:42,508 - Proxy auth state: UNCHALLENGED
+[main] DEBUG 02/10 14:07:42,509 - http-outgoing-0 >> POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 14:07:42,509 - http-outgoing-0 >> Content-Type: application/javabin
+[main] DEBUG 02/10 14:07:42,510 - http-outgoing-0 >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0
+[main] DEBUG 02/10 14:07:42,510 - http-outgoing-0 >> Transfer-Encoding: chunked
+[main] DEBUG 02/10 14:07:42,510 - http-outgoing-0 >> Host: localhost:8080
+[main] DEBUG 02/10 14:07:42,511 - http-outgoing-0 >> Connection: Keep-Alive
+[main] DEBUG 02/10 14:07:42,518 - http-outgoing-0 >> "POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+[main] DEBUG 02/10 14:07:42,519 - http-outgoing-0 >> "Content-Type: application/javabin[\r][\n]"
+[main] DEBUG 02/10 14:07:42,519 - http-outgoing-0 >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0[\r][\n]"
+[main] DEBUG 02/10 14:07:42,519 - http-outgoing-0 >> "Transfer-Encoding: chunked[\r][\n]"
+[main] DEBUG 02/10 14:07:42,520 - http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+[main] DEBUG 02/10 14:07:42,520 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[main] DEBUG 02/10 14:07:42,520 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 14:07:42,520 - http-outgoing-0 >> "2b[\r][\n]"
+[main] DEBUG 02/10 14:07:42,521 - http-outgoing-0 >> "[0x2][0xc3][0xe0]&params[0xc0][0xe0]&delByQ[0x81]/recordtype:list[0xe0]$docs[0x0][\r][\n]"
+[main] DEBUG 02/10 14:07:42,521 - http-outgoing-0 >> "0[\r][\n]"
+[main] DEBUG 02/10 14:07:42,522 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 14:07:42,571 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+[main] DEBUG 02/10 14:07:42,571 - http-outgoing-0 << "Content-Type: application/octet-stream[\r][\n]"
+[main] DEBUG 02/10 14:07:42,572 - http-outgoing-0 << "Content-Length: 41[\r][\n]"
+[main] DEBUG 02/10 14:07:42,572 - http-outgoing-0 << "[\r][\n]"
+[main] DEBUG 02/10 14:07:42,572 - http-outgoing-0 << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTime][0x2]"
+[main] DEBUG 02/10 14:07:42,574 - http-outgoing-0 << HTTP/1.1 200 OK
+[main] DEBUG 02/10 14:07:42,574 - http-outgoing-0 << Content-Type: application/octet-stream
+[main] DEBUG 02/10 14:07:42,575 - http-outgoing-0 << Content-Length: 41
+[main] DEBUG 02/10 14:07:42,576 - Connection can be kept alive indefinitely
+[main] DEBUG 02/10 14:07:42,585 - Connection [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient] can be kept alive indefinitely
+[main] DEBUG 02/10 14:07:42,585 - Connection released: [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 1; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 14:07:42,590 - Indexed lists: processed 0 indexed 0
+[main] INFO  02/10 14:07:42,594 - Time elapsed: 0.008533333 minutes
+[main] INFO  02/10 14:07:42,598 - Finished Reindex for test.localhostaspen processed 0
+[main] INFO  02/10 14:07:42,598 - Elapsed Minutes 0
+[main] DEBUG 02/10 14:07:42,604 - Connection manager is shutting down
+[main] DEBUG 02/10 14:07:42,605 - Connection manager shut down
+[main] DEBUG 02/10 14:07:42,605 - Connection manager is shutting down
+[main] DEBUG 02/10 14:07:42,606 - Connection manager shut down
+[main] DEBUG 02/10 14:07:42,606 - Connection manager is shutting down
+[main] DEBUG 02/10 14:07:42,607 - http-outgoing-0: Close connection
+[main] DEBUG 02/10 14:07:42,607 - Connection manager shut down
+[main] DEBUG 02/10 14:07:42,610 - STATS pollInteruppts=0 pollExists=0 blockLoops=0 emptyQueueLoops=0
+[main] INFO  02/10 14:07:42,628 - Free memory: 1146839040 total memory: 3853996032 percent memory usage: 0.29757142
+[main] INFO  02/10 14:07:42,628 - Ending because we have low memory available
+[main] INFO  02/10 14:07:48,412 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 14:07:48,425 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 14:07:48,426 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 14:07:48,428 - Starting Reindex for test.localhostaspen
+[main] INFO  02/10 14:07:48,428 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 14:07:48,430 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 14:07:48,431 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 14:07:48,432 - Setting up database connections
+[main] INFO  02/10 14:07:48,562 - Deleted 0 old log entries
+[main] DEBUG 02/10 14:07:48,711 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 14:07:48,736 - Error loading search version
+java.sql.SQLSyntaxErrorException: Unknown column 'searchVersion' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:78) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] DEBUG 02/10 14:07:48,740 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] DEBUG 02/10 14:07:48,741 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 14:07:48,749 - Error setting up scopes
+java.sql.SQLSyntaxErrorException: Unknown column 'courseReserveLibrariesToInclude' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadLibraryScopes(IndexingUtils.java:541) ~[user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadScopes(IndexingUtils.java:32) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:95) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] INFO  02/10 14:07:48,750 - Reindexing lists
+[main] DEBUG 02/10 14:07:48,753 - Indexed lists: processed 0 indexed 0
+[main] INFO  02/10 14:07:48,759 - Time elapsed: 0.0057333335 minutes
+[main] INFO  02/10 14:07:48,762 - Finished Reindex for test.localhostaspen processed 0
+[main] INFO  02/10 14:07:48,762 - Elapsed Minutes 0
+[main] DEBUG 02/10 14:07:48,768 - Connection manager is shutting down
+[main] DEBUG 02/10 14:07:48,768 - Connection manager shut down
+[main] DEBUG 02/10 14:07:48,768 - Connection manager is shutting down
+[main] DEBUG 02/10 14:07:48,768 - Connection manager shut down
+[main] DEBUG 02/10 14:07:48,769 - Connection manager is shutting down
+[main] DEBUG 02/10 14:07:48,769 - Connection manager shut down
+[main] DEBUG 02/10 14:07:48,771 - STATS pollInteruppts=0 pollExists=0 blockLoops=0 emptyQueueLoops=0
+[main] INFO  02/10 14:07:48,786 - Free memory: 1134034944 total memory: 3853996032 percent memory usage: 0.29424912
+[main] INFO  02/10 14:07:48,786 - Ending because we have low memory available
+[main] INFO  02/10 15:55:31,225 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 15:55:31,239 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 15:55:31,241 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 15:55:31,243 - Starting Reindex for test.localhostaspen
+[main] INFO  02/10 15:55:31,243 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 15:55:31,247 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 15:55:31,249 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 15:55:31,250 - Setting up database connections
+[main] INFO  02/10 15:55:31,474 - Deleted 0 old log entries
+[main] DEBUG 02/10 15:55:31,700 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 15:55:31,735 - Error loading search version
+java.sql.SQLSyntaxErrorException: Unknown column 'searchVersion' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:78) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] DEBUG 02/10 15:55:31,740 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] DEBUG 02/10 15:55:31,741 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 15:55:31,756 - Error setting up scopes
+java.sql.SQLSyntaxErrorException: Unknown column 'courseReserveLibrariesToInclude' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadLibraryScopes(IndexingUtils.java:509) ~[user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadScopes(IndexingUtils.java:33) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:95) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] INFO  02/10 15:55:31,757 - Reindexing lists
+[main] DEBUG 02/10 15:55:31,777 - CookieSpec selected: default
+[main] DEBUG 02/10 15:55:31,783 - Auth cache not set in the context
+[main] DEBUG 02/10 15:55:31,785 - Connection request: [route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 0; route allocated: 0 of 10000; total allocated: 0 of 10000]
+[main] DEBUG 02/10 15:55:31,794 - Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 15:55:31,795 - Opening connection {}->http://localhost:8080
+[main] DEBUG 02/10 15:55:31,798 - Connecting to localhost/127.0.0.1:8080
+[main] DEBUG 02/10 15:55:31,799 - Connection established 127.0.0.1:41476<->127.0.0.1:8080
+[main] DEBUG 02/10 15:55:31,800 - http-outgoing-0: set socket timeout to 600000
+[main] DEBUG 02/10 15:55:31,800 - Executing request POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 15:55:31,800 - Target auth state: UNCHALLENGED
+[main] DEBUG 02/10 15:55:31,801 - Proxy auth state: UNCHALLENGED
+[main] DEBUG 02/10 15:55:31,802 - http-outgoing-0 >> POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 15:55:31,803 - http-outgoing-0 >> Content-Type: application/javabin
+[main] DEBUG 02/10 15:55:31,803 - http-outgoing-0 >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0
+[main] DEBUG 02/10 15:55:31,804 - http-outgoing-0 >> Transfer-Encoding: chunked
+[main] DEBUG 02/10 15:55:31,804 - http-outgoing-0 >> Host: localhost:8080
+[main] DEBUG 02/10 15:55:31,804 - http-outgoing-0 >> Connection: Keep-Alive
+[main] DEBUG 02/10 15:55:31,813 - http-outgoing-0 >> "POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+[main] DEBUG 02/10 15:55:31,813 - http-outgoing-0 >> "Content-Type: application/javabin[\r][\n]"
+[main] DEBUG 02/10 15:55:31,814 - http-outgoing-0 >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0[\r][\n]"
+[main] DEBUG 02/10 15:55:31,814 - http-outgoing-0 >> "Transfer-Encoding: chunked[\r][\n]"
+[main] DEBUG 02/10 15:55:31,814 - http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+[main] DEBUG 02/10 15:55:31,815 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[main] DEBUG 02/10 15:55:31,815 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 15:55:31,816 - http-outgoing-0 >> "2b[\r][\n]"
+[main] DEBUG 02/10 15:55:31,816 - http-outgoing-0 >> "[0x2][0xc3][0xe0]&params[0xc0][0xe0]&delByQ[0x81]/recordtype:list[0xe0]$docs[0x0][\r][\n]"
+[main] DEBUG 02/10 15:55:31,817 - http-outgoing-0 >> "0[\r][\n]"
+[main] DEBUG 02/10 15:55:31,817 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 15:55:31,874 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+[main] DEBUG 02/10 15:55:31,874 - http-outgoing-0 << "Content-Type: application/octet-stream[\r][\n]"
+[main] DEBUG 02/10 15:55:31,874 - http-outgoing-0 << "Content-Length: 41[\r][\n]"
+[main] DEBUG 02/10 15:55:31,875 - http-outgoing-0 << "[\r][\n]"
+[main] DEBUG 02/10 15:55:31,875 - http-outgoing-0 << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeT[0x3]"
+[main] DEBUG 02/10 15:55:31,877 - http-outgoing-0 << HTTP/1.1 200 OK
+[main] DEBUG 02/10 15:55:31,877 - http-outgoing-0 << Content-Type: application/octet-stream
+[main] DEBUG 02/10 15:55:31,878 - http-outgoing-0 << Content-Length: 41
+[main] DEBUG 02/10 15:55:31,881 - Connection can be kept alive indefinitely
+[main] DEBUG 02/10 15:55:31,891 - Connection [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient] can be kept alive indefinitely
+[main] DEBUG 02/10 15:55:31,892 - Connection released: [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 1; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 15:55:31,899 - Indexed lists: processed 0 indexed 0
+[main] INFO  02/10 15:55:31,905 - Time elapsed: 0.011283333 minutes
+[main] INFO  02/10 15:55:31,909 - Finished Reindex for test.localhostaspen processed 0
+[main] INFO  02/10 15:55:31,909 - Elapsed Minutes 0
+[main] DEBUG 02/10 15:55:31,918 - Connection manager is shutting down
+[main] DEBUG 02/10 15:55:31,918 - Connection manager shut down
+[main] DEBUG 02/10 15:55:31,919 - Connection manager is shutting down
+[main] DEBUG 02/10 15:55:31,920 - Connection manager shut down
+[main] DEBUG 02/10 15:55:31,920 - Connection manager is shutting down
+[main] DEBUG 02/10 15:55:31,921 - http-outgoing-0: Close connection
+[main] DEBUG 02/10 15:55:31,922 - Connection manager shut down
+[main] DEBUG 02/10 15:55:31,924 - STATS pollInteruppts=0 pollExists=0 blockLoops=0 emptyQueueLoops=0
+[main] INFO  02/10 15:55:31,946 - Free memory: 1159655424 total memory: 3853996032 percent memory usage: 0.30089688
+[main] INFO  02/10 15:55:31,947 - Ending because we have low memory available
+[main] INFO  02/10 16:44:43,208 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 16:44:43,222 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 16:44:43,224 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 16:44:43,225 - Starting Reindex for test.localhostaspen
+[main] INFO  02/10 16:44:43,226 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 16:44:43,229 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 16:44:43,230 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 16:44:43,232 - Setting up database connections
+[main] INFO  02/10 16:44:43,427 - Deleted 0 old log entries
+[main] DEBUG 02/10 16:44:43,637 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 16:44:43,674 - Error loading search version
+java.sql.SQLSyntaxErrorException: Unknown column 'searchVersion' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:78) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] DEBUG 02/10 16:44:43,678 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] DEBUG 02/10 16:44:43,680 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 16:44:43,692 - Error setting up scopes
+java.sql.SQLSyntaxErrorException: Unknown column 'courseReserveLibrariesToInclude' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadLibraryScopes(IndexingUtils.java:541) ~[user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadScopes(IndexingUtils.java:32) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:95) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] INFO  02/10 16:44:43,692 - Reindexing lists
+[main] DEBUG 02/10 16:44:43,707 - CookieSpec selected: default
+[main] DEBUG 02/10 16:44:43,712 - Auth cache not set in the context
+[main] DEBUG 02/10 16:44:43,714 - Connection request: [route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 0; route allocated: 0 of 10000; total allocated: 0 of 10000]
+[main] DEBUG 02/10 16:44:43,722 - Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 16:44:43,724 - Opening connection {}->http://localhost:8080
+[main] DEBUG 02/10 16:44:43,726 - Connecting to localhost/127.0.0.1:8080
+[main] DEBUG 02/10 16:44:43,727 - Connection established 127.0.0.1:56840<->127.0.0.1:8080
+[main] DEBUG 02/10 16:44:43,727 - http-outgoing-0: set socket timeout to 600000
+[main] DEBUG 02/10 16:44:43,728 - Executing request POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 16:44:43,728 - Target auth state: UNCHALLENGED
+[main] DEBUG 02/10 16:44:43,729 - Proxy auth state: UNCHALLENGED
+[main] DEBUG 02/10 16:44:43,731 - http-outgoing-0 >> POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 16:44:43,731 - http-outgoing-0 >> Content-Type: application/javabin
+[main] DEBUG 02/10 16:44:43,731 - http-outgoing-0 >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0
+[main] DEBUG 02/10 16:44:43,732 - http-outgoing-0 >> Transfer-Encoding: chunked
+[main] DEBUG 02/10 16:44:43,732 - http-outgoing-0 >> Host: localhost:8080
+[main] DEBUG 02/10 16:44:43,733 - http-outgoing-0 >> Connection: Keep-Alive
+[main] DEBUG 02/10 16:44:43,741 - http-outgoing-0 >> "POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+[main] DEBUG 02/10 16:44:43,742 - http-outgoing-0 >> "Content-Type: application/javabin[\r][\n]"
+[main] DEBUG 02/10 16:44:43,743 - http-outgoing-0 >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0[\r][\n]"
+[main] DEBUG 02/10 16:44:43,743 - http-outgoing-0 >> "Transfer-Encoding: chunked[\r][\n]"
+[main] DEBUG 02/10 16:44:43,743 - http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+[main] DEBUG 02/10 16:44:43,743 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[main] DEBUG 02/10 16:44:43,744 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 16:44:43,744 - http-outgoing-0 >> "2b[\r][\n]"
+[main] DEBUG 02/10 16:44:43,744 - http-outgoing-0 >> "[0x2][0xc3][0xe0]&params[0xc0][0xe0]&delByQ[0x81]/recordtype:list[0xe0]$docs[0x0][\r][\n]"
+[main] DEBUG 02/10 16:44:43,745 - http-outgoing-0 >> "0[\r][\n]"
+[main] DEBUG 02/10 16:44:43,745 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 16:44:43,800 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+[main] DEBUG 02/10 16:44:43,801 - http-outgoing-0 << "Content-Type: application/octet-stream[\r][\n]"
+[main] DEBUG 02/10 16:44:43,802 - http-outgoing-0 << "Content-Length: 41[\r][\n]"
+[main] DEBUG 02/10 16:44:43,802 - http-outgoing-0 << "[\r][\n]"
+[main] DEBUG 02/10 16:44:43,802 - http-outgoing-0 << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeT[0x3]"
+[main] DEBUG 02/10 16:44:43,804 - http-outgoing-0 << HTTP/1.1 200 OK
+[main] DEBUG 02/10 16:44:43,805 - http-outgoing-0 << Content-Type: application/octet-stream
+[main] DEBUG 02/10 16:44:43,805 - http-outgoing-0 << Content-Length: 41
+[main] DEBUG 02/10 16:44:43,807 - Connection can be kept alive indefinitely
+[main] DEBUG 02/10 16:44:43,818 - Connection [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient] can be kept alive indefinitely
+[main] DEBUG 02/10 16:44:43,819 - Connection released: [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 1; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 16:44:43,825 - Indexed lists: processed 0 indexed 0
+[main] INFO  02/10 16:44:43,831 - Time elapsed: 0.01035 minutes
+[main] INFO  02/10 16:44:43,835 - Finished Reindex for test.localhostaspen processed 0
+[main] INFO  02/10 16:44:43,835 - Elapsed Minutes 0
+[main] DEBUG 02/10 16:44:43,844 - Connection manager is shutting down
+[main] DEBUG 02/10 16:44:43,845 - Connection manager shut down
+[main] DEBUG 02/10 16:44:43,845 - Connection manager is shutting down
+[main] DEBUG 02/10 16:44:43,845 - Connection manager shut down
+[main] DEBUG 02/10 16:44:43,846 - Connection manager is shutting down
+[main] DEBUG 02/10 16:44:43,846 - http-outgoing-0: Close connection
+[main] DEBUG 02/10 16:44:43,847 - Connection manager shut down
+[main] DEBUG 02/10 16:44:43,850 - STATS pollInteruppts=0 pollExists=0 blockLoops=0 emptyQueueLoops=0
+[main] INFO  02/10 16:44:43,875 - Free memory: 1133371392 total memory: 3853996032 percent memory usage: 0.29407695
+[main] INFO  02/10 16:44:43,876 - Ending because we have low memory available
+[main] INFO  02/10 16:52:19,525 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 16:52:19,555 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 16:52:19,565 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 16:52:19,570 - Starting Reindex for test.localhostaspen
+[main] INFO  02/10 16:52:19,571 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 16:52:19,577 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 16:52:19,579 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 16:52:19,583 - Setting up database connections
+[main] INFO  02/10 16:52:19,897 - Deleted 0 old log entries
+[main] DEBUG 02/10 16:52:20,321 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 16:52:20,368 - Error loading search version
+java.sql.SQLSyntaxErrorException: Unknown column 'searchVersion' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:78) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] DEBUG 02/10 16:52:20,374 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] DEBUG 02/10 16:52:20,377 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 16:52:20,400 - Error setting up scopes
+java.sql.SQLSyntaxErrorException: Unknown column 'courseReserveLibrariesToInclude' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadLibraryScopes(IndexingUtils.java:541) ~[user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadScopes(IndexingUtils.java:32) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:95) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] INFO  02/10 16:52:20,403 - Reindexing lists
+[main] DEBUG 02/10 16:52:20,415 - Indexed lists: processed 0 indexed 0
+[main] INFO  02/10 16:52:20,424 - Time elapsed: 0.014916667 minutes
+[main] INFO  02/10 16:52:20,428 - Finished Reindex for test.localhostaspen processed 0
+[main] INFO  02/10 16:52:20,429 - Elapsed Minutes 0
+[main] DEBUG 02/10 16:52:20,440 - Connection manager is shutting down
+[main] DEBUG 02/10 16:52:20,441 - Connection manager shut down
+[main] DEBUG 02/10 16:52:20,441 - Connection manager is shutting down
+[main] DEBUG 02/10 16:52:20,442 - Connection manager shut down
+[main] DEBUG 02/10 16:52:20,443 - Connection manager is shutting down
+[main] DEBUG 02/10 16:52:20,443 - Connection manager shut down
+[main] DEBUG 02/10 16:52:20,446 - STATS pollInteruppts=0 pollExists=0 blockLoops=0 emptyQueueLoops=0
+[main] INFO  02/10 16:52:20,471 - Free memory: 1140662272 total memory: 3853996032 percent memory usage: 0.2959687
+[main] INFO  02/10 16:52:20,471 - Ending because we have low memory available
+[main] INFO  02/10 16:54:54,465 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 16:54:54,513 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 16:54:54,518 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 16:54:54,523 - Starting Reindex for test.localhostaspen
+[main] INFO  02/10 16:54:54,523 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 16:54:54,528 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 16:54:54,530 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 16:54:54,533 - Setting up database connections
+[main] INFO  02/10 16:54:54,942 - Deleted 0 old log entries
+[main] DEBUG 02/10 16:54:55,216 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 16:54:55,260 - Error loading search version
+java.sql.SQLSyntaxErrorException: Unknown column 'searchVersion' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:78) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] DEBUG 02/10 16:54:55,265 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] DEBUG 02/10 16:54:55,267 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 16:54:55,280 - Error setting up scopes
+java.sql.SQLSyntaxErrorException: Unknown column 'courseReserveLibrariesToInclude' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadLibraryScopes(IndexingUtils.java:541) ~[user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadScopes(IndexingUtils.java:32) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:95) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] INFO  02/10 16:54:55,281 - Reindexing lists
+[main] DEBUG 02/10 16:54:55,297 - CookieSpec selected: default
+[main] DEBUG 02/10 16:54:55,304 - Auth cache not set in the context
+[main] DEBUG 02/10 16:54:55,306 - Connection request: [route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 0; route allocated: 0 of 10000; total allocated: 0 of 10000]
+[main] DEBUG 02/10 16:54:55,315 - Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 16:54:55,316 - Opening connection {}->http://localhost:8080
+[main] DEBUG 02/10 16:54:55,319 - Connecting to localhost/127.0.0.1:8080
+[main] DEBUG 02/10 16:54:55,321 - Connection established 127.0.0.1:52148<->127.0.0.1:8080
+[main] DEBUG 02/10 16:54:55,322 - http-outgoing-0: set socket timeout to 600000
+[main] DEBUG 02/10 16:54:55,323 - Executing request POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 16:54:55,323 - Target auth state: UNCHALLENGED
+[main] DEBUG 02/10 16:54:55,324 - Proxy auth state: UNCHALLENGED
+[main] DEBUG 02/10 16:54:55,326 - http-outgoing-0 >> POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 16:54:55,326 - http-outgoing-0 >> Content-Type: application/javabin
+[main] DEBUG 02/10 16:54:55,327 - http-outgoing-0 >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0
+[main] DEBUG 02/10 16:54:55,327 - http-outgoing-0 >> Transfer-Encoding: chunked
+[main] DEBUG 02/10 16:54:55,327 - http-outgoing-0 >> Host: localhost:8080
+[main] DEBUG 02/10 16:54:55,328 - http-outgoing-0 >> Connection: Keep-Alive
+[main] DEBUG 02/10 16:54:55,338 - http-outgoing-0 >> "POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+[main] DEBUG 02/10 16:54:55,339 - http-outgoing-0 >> "Content-Type: application/javabin[\r][\n]"
+[main] DEBUG 02/10 16:54:55,339 - http-outgoing-0 >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0[\r][\n]"
+[main] DEBUG 02/10 16:54:55,339 - http-outgoing-0 >> "Transfer-Encoding: chunked[\r][\n]"
+[main] DEBUG 02/10 16:54:55,340 - http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+[main] DEBUG 02/10 16:54:55,340 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[main] DEBUG 02/10 16:54:55,340 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 16:54:55,342 - http-outgoing-0 >> "2b[\r][\n]"
+[main] DEBUG 02/10 16:54:55,342 - http-outgoing-0 >> "[0x2][0xc3][0xe0]&params[0xc0][0xe0]&delByQ[0x81]/recordtype:list[0xe0]$docs[0x0][\r][\n]"
+[main] DEBUG 02/10 16:54:55,343 - http-outgoing-0 >> "0[\r][\n]"
+[main] DEBUG 02/10 16:54:55,343 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 16:54:55,410 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+[main] DEBUG 02/10 16:54:55,411 - http-outgoing-0 << "Content-Type: application/octet-stream[\r][\n]"
+[main] DEBUG 02/10 16:54:55,411 - http-outgoing-0 << "Content-Length: 41[\r][\n]"
+[main] DEBUG 02/10 16:54:55,411 - http-outgoing-0 << "[\r][\n]"
+[main] DEBUG 02/10 16:54:55,411 - http-outgoing-0 << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTime^[0x3]"
+[main] DEBUG 02/10 16:54:55,414 - http-outgoing-0 << HTTP/1.1 200 OK
+[main] DEBUG 02/10 16:54:55,414 - http-outgoing-0 << Content-Type: application/octet-stream
+[main] DEBUG 02/10 16:54:55,415 - http-outgoing-0 << Content-Length: 41
+[main] DEBUG 02/10 16:54:55,417 - Connection can be kept alive indefinitely
+[main] DEBUG 02/10 16:54:55,427 - Connection [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient] can be kept alive indefinitely
+[main] DEBUG 02/10 16:54:55,428 - Connection released: [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 1; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 16:54:55,433 - Indexed lists: processed 0 indexed 0
+[main] INFO  02/10 16:54:55,440 - Time elapsed: 0.016266666 minutes
+[main] INFO  02/10 16:54:55,444 - Finished Reindex for test.localhostaspen processed 0
+[main] INFO  02/10 16:54:55,445 - Elapsed Minutes 0
+[main] DEBUG 02/10 16:54:55,452 - Connection manager is shutting down
+[main] DEBUG 02/10 16:54:55,453 - Connection manager shut down
+[main] DEBUG 02/10 16:54:55,453 - Connection manager is shutting down
+[main] DEBUG 02/10 16:54:55,454 - Connection manager shut down
+[main] DEBUG 02/10 16:54:55,455 - Connection manager is shutting down
+[main] DEBUG 02/10 16:54:55,455 - http-outgoing-0: Close connection
+[main] DEBUG 02/10 16:54:55,456 - Connection manager shut down
+[main] DEBUG 02/10 16:54:55,458 - STATS pollInteruppts=0 pollExists=0 blockLoops=0 emptyQueueLoops=0
+[main] INFO  02/10 16:54:55,480 - Free memory: 1102630912 total memory: 3853996032 percent memory usage: 0.2861007
+[main] INFO  02/10 16:54:55,480 - Ending because we have low memory available
+[main] INFO  02/10 17:05:11,837 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 17:05:11,864 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 17:05:11,867 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 17:05:11,869 - Starting Reindex for test.localhostaspen
+[main] INFO  02/10 17:05:11,869 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 17:05:11,874 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 17:05:11,876 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 17:05:11,878 - Setting up database connections
+[main] INFO  02/10 17:05:12,204 - Deleted 0 old log entries
+[main] DEBUG 02/10 17:05:12,671 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 17:05:12,757 - Error loading search version
+java.sql.SQLSyntaxErrorException: Unknown column 'searchVersion' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:78) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] DEBUG 02/10 17:05:12,766 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] DEBUG 02/10 17:05:12,769 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 17:05:12,797 - Error setting up scopes
+java.sql.SQLSyntaxErrorException: Unknown column 'courseReserveLibrariesToInclude' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadLibraryScopes(IndexingUtils.java:541) ~[user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadScopes(IndexingUtils.java:32) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:95) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] INFO  02/10 17:05:12,798 - Reindexing lists
+[main] DEBUG 02/10 17:05:12,833 - CookieSpec selected: default
+[main] DEBUG 02/10 17:05:12,842 - Auth cache not set in the context
+[main] DEBUG 02/10 17:05:12,845 - Connection request: [route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 0; route allocated: 0 of 10000; total allocated: 0 of 10000]
+[main] DEBUG 02/10 17:05:12,861 - Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 17:05:12,864 - Opening connection {}->http://localhost:8080
+[main] DEBUG 02/10 17:05:12,869 - Connecting to localhost/127.0.0.1:8080
+[main] DEBUG 02/10 17:05:12,874 - Connection established 127.0.0.1:48588<->127.0.0.1:8080
+[main] DEBUG 02/10 17:05:12,876 - http-outgoing-0: set socket timeout to 600000
+[main] DEBUG 02/10 17:05:12,880 - Executing request POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 17:05:12,882 - Target auth state: UNCHALLENGED
+[main] DEBUG 02/10 17:05:12,885 - Proxy auth state: UNCHALLENGED
+[main] DEBUG 02/10 17:05:12,890 - http-outgoing-0 >> POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 17:05:12,891 - http-outgoing-0 >> Content-Type: application/javabin
+[main] DEBUG 02/10 17:05:12,894 - http-outgoing-0 >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0
+[main] DEBUG 02/10 17:05:12,895 - http-outgoing-0 >> Transfer-Encoding: chunked
+[main] DEBUG 02/10 17:05:12,896 - http-outgoing-0 >> Host: localhost:8080
+[main] DEBUG 02/10 17:05:12,897 - http-outgoing-0 >> Connection: Keep-Alive
+[main] DEBUG 02/10 17:05:12,917 - http-outgoing-0 >> "POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+[main] DEBUG 02/10 17:05:12,918 - http-outgoing-0 >> "Content-Type: application/javabin[\r][\n]"
+[main] DEBUG 02/10 17:05:12,919 - http-outgoing-0 >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0[\r][\n]"
+[main] DEBUG 02/10 17:05:12,919 - http-outgoing-0 >> "Transfer-Encoding: chunked[\r][\n]"
+[main] DEBUG 02/10 17:05:12,919 - http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+[main] DEBUG 02/10 17:05:12,921 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[main] DEBUG 02/10 17:05:12,922 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 17:05:12,922 - http-outgoing-0 >> "2b[\r][\n]"
+[main] DEBUG 02/10 17:05:12,923 - http-outgoing-0 >> "[0x2][0xc3][0xe0]&params[0xc0][0xe0]&delByQ[0x81]/recordtype:list[0xe0]$docs[0x0][\r][\n]"
+[main] DEBUG 02/10 17:05:12,923 - http-outgoing-0 >> "0[\r][\n]"
+[main] DEBUG 02/10 17:05:12,923 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 17:05:13,021 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+[main] DEBUG 02/10 17:05:13,022 - http-outgoing-0 << "Content-Type: application/octet-stream[\r][\n]"
+[main] DEBUG 02/10 17:05:13,022 - http-outgoing-0 << "Content-Length: 41[\r][\n]"
+[main] DEBUG 02/10 17:05:13,023 - http-outgoing-0 << "[\r][\n]"
+[main] DEBUG 02/10 17:05:13,023 - http-outgoing-0 << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeZ[0x5]"
+[main] DEBUG 02/10 17:05:13,028 - http-outgoing-0 << HTTP/1.1 200 OK
+[main] DEBUG 02/10 17:05:13,029 - http-outgoing-0 << Content-Type: application/octet-stream
+[main] DEBUG 02/10 17:05:13,029 - http-outgoing-0 << Content-Length: 41
+[main] DEBUG 02/10 17:05:13,032 - Connection can be kept alive indefinitely
+[main] DEBUG 02/10 17:05:13,047 - Connection [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient] can be kept alive indefinitely
+[main] DEBUG 02/10 17:05:13,048 - Connection released: [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 1; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 17:05:13,056 - Indexed lists: processed 0 indexed 0
+[main] INFO  02/10 17:05:13,076 - Time elapsed: 0.0204 minutes
+[main] INFO  02/10 17:05:13,081 - Finished Reindex for test.localhostaspen processed 0
+[main] INFO  02/10 17:05:13,082 - Elapsed Minutes 0
+[main] DEBUG 02/10 17:05:13,096 - Connection manager is shutting down
+[main] DEBUG 02/10 17:05:13,100 - Connection manager shut down
+[main] DEBUG 02/10 17:05:13,103 - Connection manager is shutting down
+[main] DEBUG 02/10 17:05:13,104 - Connection manager shut down
+[main] DEBUG 02/10 17:05:13,106 - Connection manager is shutting down
+[main] DEBUG 02/10 17:05:13,107 - http-outgoing-0: Close connection
+[main] DEBUG 02/10 17:05:13,107 - Connection manager shut down
+[main] DEBUG 02/10 17:05:13,111 - STATS pollInteruppts=0 pollExists=0 blockLoops=0 emptyQueueLoops=0
+[main] INFO  02/10 17:05:13,137 - Free memory: 1074720768 total memory: 3853996032 percent memory usage: 0.2788588
+[main] INFO  02/10 17:05:13,138 - Ending because we have low memory available
+[main] INFO  02/10 17:39:59,946 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 17:39:59,981 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 17:39:59,987 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 17:39:59,992 - Starting Reindex for test.localhostaspen
+[main] INFO  02/10 17:39:59,993 - Loading configuration from ../../sites/default/conf/config.ini
+[main] INFO  02/10 17:40:00,001 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
+[main] INFO  02/10 17:40:00,004 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
+[main] INFO  02/10 17:40:00,006 - Setting up database connections
+[main] INFO  02/10 17:40:00,448 - Deleted 0 old log entries
+[main] DEBUG 02/10 17:40:01,037 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 17:40:01,123 - Error loading search version
+java.sql.SQLSyntaxErrorException: Unknown column 'searchVersion' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:78) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] DEBUG 02/10 17:40:01,131 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] DEBUG 02/10 17:40:01,136 - Creating new http client, config:followRedirects=false&allowCompression=false
+[main] ERROR 02/10 17:40:01,165 - Error setting up scopes
+java.sql.SQLSyntaxErrorException: Unknown column 'courseReserveLibrariesToInclude' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadLibraryScopes(IndexingUtils.java:541) ~[user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.indexing.IndexingUtils.loadScopes(IndexingUtils.java:32) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexer.<init>(UserListIndexer.java:95) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.initializeIndexer(UserListIndexerMain.java:186) [user_list_indexer.jar:?]
+	at com.turning_leaf_technologies.reindexer.UserListIndexerMain.main(UserListIndexerMain.java:60) [user_list_indexer.jar:?]
+[main] INFO  02/10 17:40:01,166 - Reindexing lists
+[main] DEBUG 02/10 17:40:01,209 - CookieSpec selected: default
+[main] DEBUG 02/10 17:40:01,233 - Auth cache not set in the context
+[main] DEBUG 02/10 17:40:01,243 - Connection request: [route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 0; route allocated: 0 of 10000; total allocated: 0 of 10000]
+[main] DEBUG 02/10 17:40:01,270 - Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 17:40:01,274 - Opening connection {}->http://localhost:8080
+[main] DEBUG 02/10 17:40:01,280 - Connecting to localhost/127.0.0.1:8080
+[main] DEBUG 02/10 17:40:01,282 - Connection established 127.0.0.1:50666<->127.0.0.1:8080
+[main] DEBUG 02/10 17:40:01,283 - http-outgoing-0: set socket timeout to 600000
+[main] DEBUG 02/10 17:40:01,285 - Executing request POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 17:40:01,287 - Target auth state: UNCHALLENGED
+[main] DEBUG 02/10 17:40:01,289 - Proxy auth state: UNCHALLENGED
+[main] DEBUG 02/10 17:40:01,292 - http-outgoing-0 >> POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1
+[main] DEBUG 02/10 17:40:01,293 - http-outgoing-0 >> Content-Type: application/javabin
+[main] DEBUG 02/10 17:40:01,299 - http-outgoing-0 >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0
+[main] DEBUG 02/10 17:40:01,303 - http-outgoing-0 >> Transfer-Encoding: chunked
+[main] DEBUG 02/10 17:40:01,304 - http-outgoing-0 >> Host: localhost:8080
+[main] DEBUG 02/10 17:40:01,304 - http-outgoing-0 >> Connection: Keep-Alive
+[main] DEBUG 02/10 17:40:01,323 - http-outgoing-0 >> "POST /solr/lists/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+[main] DEBUG 02/10 17:40:01,327 - http-outgoing-0 >> "Content-Type: application/javabin[\r][\n]"
+[main] DEBUG 02/10 17:40:01,328 - http-outgoing-0 >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrClient] 1.0[\r][\n]"
+[main] DEBUG 02/10 17:40:01,330 - http-outgoing-0 >> "Transfer-Encoding: chunked[\r][\n]"
+[main] DEBUG 02/10 17:40:01,332 - http-outgoing-0 >> "Host: localhost:8080[\r][\n]"
+[main] DEBUG 02/10 17:40:01,333 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[main] DEBUG 02/10 17:40:01,336 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 17:40:01,338 - http-outgoing-0 >> "2b[\r][\n]"
+[main] DEBUG 02/10 17:40:01,341 - http-outgoing-0 >> "[0x2][0xc3][0xe0]&params[0xc0][0xe0]&delByQ[0x81]/recordtype:list[0xe0]$docs[0x0][\r][\n]"
+[main] DEBUG 02/10 17:40:01,343 - http-outgoing-0 >> "0[\r][\n]"
+[main] DEBUG 02/10 17:40:01,343 - http-outgoing-0 >> "[\r][\n]"
+[main] DEBUG 02/10 17:40:01,596 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+[main] DEBUG 02/10 17:40:01,597 - http-outgoing-0 << "Content-Type: application/octet-stream[\r][\n]"
+[main] DEBUG 02/10 17:40:01,597 - http-outgoing-0 << "Content-Length: 41[\r][\n]"
+[main] DEBUG 02/10 17:40:01,597 - http-outgoing-0 << "[\r][\n]"
+[main] DEBUG 02/10 17:40:01,598 - http-outgoing-0 << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTime^[0x6]"
+[main] DEBUG 02/10 17:40:01,602 - http-outgoing-0 << HTTP/1.1 200 OK
+[main] DEBUG 02/10 17:40:01,602 - http-outgoing-0 << Content-Type: application/octet-stream
+[main] DEBUG 02/10 17:40:01,602 - http-outgoing-0 << Content-Length: 41
+[main] DEBUG 02/10 17:40:01,605 - Connection can be kept alive indefinitely
+[main] DEBUG 02/10 17:40:01,623 - Connection [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient] can be kept alive indefinitely
+[main] DEBUG 02/10 17:40:01,624 - Connection released: [id: 0][route: {}->http://localhost:8080][state: class org.apache.solr.client.solrj.impl.HttpSolrClient][total kept alive: 1; route allocated: 1 of 10000; total allocated: 1 of 10000]
+[main] DEBUG 02/10 17:40:01,633 - Indexed lists: processed 0 indexed 0
+[main] INFO  02/10 17:40:01,691 - Time elapsed: 0.028216667 minutes
+[main] INFO  02/10 17:40:01,695 - Finished Reindex for test.localhostaspen processed 0
+[main] INFO  02/10 17:40:01,695 - Elapsed Minutes 0
+[main] DEBUG 02/10 17:40:01,704 - Connection manager is shutting down
+[main] DEBUG 02/10 17:40:01,704 - Connection manager shut down
+[main] DEBUG 02/10 17:40:01,704 - Connection manager is shutting down
+[main] DEBUG 02/10 17:40:01,705 - Connection manager shut down
+[main] DEBUG 02/10 17:40:01,706 - Connection manager is shutting down
+[main] DEBUG 02/10 17:40:01,707 - http-outgoing-0: Close connection
+[main] DEBUG 02/10 17:40:01,708 - Connection manager shut down
+[main] DEBUG 02/10 17:40:01,712 - STATS pollInteruppts=0 pollExists=0 blockLoops=0 emptyQueueLoops=0
+[main] INFO  02/10 17:40:01,739 - Free memory: 1051688960 total memory: 3853996032 percent memory usage: 0.27288273
+[main] INFO  02/10 17:40:01,740 - Ending because we have low memory available

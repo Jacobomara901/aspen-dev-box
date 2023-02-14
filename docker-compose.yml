@@ -2,14 +2,14 @@ version: '3.3'
 services:
     aspenselfcontained2:
         build:
-          dockerfile: $ASPEN_DOCKER_2/dockerfile
+          dockerfile: $ASPEN_DOCKER/dockerfile
         volumes:
-            - '$ASPEN_CLONE_2:/usr/local/aspen-discovery'
-            - '$ASPEN_DOCKER_2/site/:/usr/local/aspen-discovery/sites/test.localhostaspen'
-            - '$ASPEN_DOCKER_2/etc/apache2/sites-enabled:/etc/apache2/sites-enabled'
-            - '$ASPEN_DOCKER_2/data/aspen-discovery/test.localhostaspen:/data/aspen-discovery/test.localhostaspen'
-            - '$ASPEN_DOCKER_2/var/log/aspen-discovery:/var/log/aspen-discovery'
-            - '$ASPEN_DOCKER_2/site/conf/config.cron.ini:/etc/cron.d/test.localhostaspen'
+            - '$ASPEN_CLONE:/usr/local/aspen-discovery'
+            - '$ASPEN_DOCKER/site/:/usr/local/aspen-discovery/sites/test.localhostaspen'
+            - '$ASPEN_DOCKER/etc/apache2/sites-enabled:/etc/apache2/sites-enabled'
+            - '$ASPEN_DOCKER/data/aspen-discovery/test.localhostaspen:/data/aspen-discovery/test.localhostaspen'
+            - '$ASPEN_DOCKER/var/log/aspen-discovery:/var/log/aspen-discovery'
+            - '$ASPEN_DOCKER/site/conf/crontab_settings.txt:/etc/cron.d/cron'
         ports:
             - '8084:8080'
             - '8083:80'
@@ -17,7 +17,9 @@ services:
         image: aspendocker2
         networks:
            external:
-
+        depends_on:
+            mariadb:
+                condition: service_healthy
         tty: true
 
 
@@ -31,7 +33,11 @@ services:
             - MYSQL_TCP_PORT:7000
         image: 'mariadb:latest'
         volumes:
-          - $ASPEN_DOCKER_2/setup.sql:/docker-entrypoint-initdb.d/init-script.sql
+          - $ASPEN_DOCKER/setup.sql:/docker-entrypoint-initdb.d/init-script.sql
+        healthcheck:
+            test: ["CMD", "mysqladmin" ,"ping", "-paspen", "-h", "localhost"]
+            timeout: 20s
+            retries: 10
         networks:
           external:
 
