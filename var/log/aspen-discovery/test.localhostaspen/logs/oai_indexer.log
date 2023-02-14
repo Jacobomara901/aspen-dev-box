@@ -1,14 +1,1 @@
-[main] INFO  02/14 13:13:00,113 - Starting oai_indexer: Tue Feb 14 13:12:59 UTC 2023
-[main] INFO  02/14 13:13:00,115 - Loading configuration from ../../sites/default/conf/config.ini
-[main] INFO  02/14 13:13:00,125 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
-[main] INFO  02/14 13:13:00,127 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
-[main] WARN  02/14 13:13:00,147 - aspen     1197  1196 80 13:12 pts/1    00:00:00 java -jar oai_indexer.jar test.localhostaspen
-[main] INFO  02/14 13:13:00,384 - Finished Tue Feb 14 13:13:00 UTC 2023
-[main] INFO  02/14 13:13:00,384 - Elapsed Minutes 0
-[main] INFO  02/14 13:13:56,529 - Starting oai_indexer: Tue Feb 14 13:13:56 UTC 2023
-[main] INFO  02/14 13:13:56,531 - Loading configuration from ../../sites/default/conf/config.ini
-[main] INFO  02/14 13:13:56,542 - Loading site specific config from ../../sites/test.localhostaspen/conf/config.ini
-[main] INFO  02/14 13:13:56,544 - Loading password config from ../../sites/test.localhostaspen/conf/config.pwd.ini
-[main] WARN  02/14 13:13:56,562 - aspen     1264  1196  0 13:13 pts/1    00:00:00 java -jar oai_indexer.jar test.localhostaspen
-[main] INFO  02/14 13:13:56,802 - Finished Tue Feb 14 13:13:56 UTC 2023
-[main] INFO  02/14 13:13:56,802 - Elapsed Minutes 0
+
