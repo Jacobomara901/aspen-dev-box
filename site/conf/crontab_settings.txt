@@ -22,28 +22,28 @@
 #############
 # Indexing Tasks #
 #############
-@reboot       solr    php /usr/local/aspen-discovery/code/web/cron/checkSolr.php test.localhostaspen
-5 2 * * *     solr   php /usr/local/aspen-discovery/code/web/cron/updateSuggesters.php test.localhostaspen
-7 3 * * *     aspen   php /usr/local/aspen-discovery/code/web/cron/createSitemaps.php test.localhostaspen
-*/2 * * * *   solr    php /usr/local/aspen-discovery/code/web/cron/checkSolr.php test.localhostaspen
-*/5 * * * *   aspen   php /usr/local/aspen-discovery/code/web/cron/checkBackgroundProcesses.php test.localhostaspen
+*/1 * * * * su solr -c "php /usr/local/aspen-discovery/code/web/cron/checkSolr.php test.localhostaspen"
+*/5 * * * * php /usr/local/aspen-discovery/code/web/cron/updateSuggesters.php test.localhostaspen
+*/7 * * * * php /usr/local/aspen-discovery/code/web/cron/createSitemaps.php test.localhostaspen
+*/2 * * * * su solr -c "php /usr/local/aspen-discovery/code/web/cron/checkSolr.php test.localhostaspen"
+*/1 * * * * su aspen -c "php /usr/local/aspen-discovery/code/web/cron/checkBackgroundProcesses.php test.localhostaspen";
 
 ########################################################
 # Regular extracts that don't need to run continuously #
 ########################################################
-0 2 * * *     aspen   cd /usr/local/aspen-discovery/code/oai_indexer; java -jar oai_indexer.jar test.localhostaspen
-0 2 * * *     aspen   cd /usr/local/aspen-discovery/code/reindexer; java -jar reindexer.jar test.localhostaspen nightly
+*/2 * * * * su aspen -c "cd /usr/local/aspen-discovery/code/oai_indexer; java -jar oai_indexer.jar test.localhostaspen";
+*/2 * * * * su aspen -c "cd /usr/local/aspen-discovery/code/reindexer; java -jar reindexer.jar test.localhostaspen nightly";
 
 ######################
 # MySQL Nightly Dump #
 ######################
 # backup important bits at 12:10am daily
-10 0 * * *    root    /usr/local/aspen-discovery/code/cron/nightly_mysql_dump.sh test.localhostaspen aspen 2>&1 >/dev/null
+10 0 * * * /usr/local/aspen-discovery/code/cron/nightly_mysql_dump.sh test.localhostaspen aspen 2>&1 >/dev/null
 
 #############################################
 # New York Times Best seller Lists Updating #
 #############################################
-15 7 * * 0-1  aspen   php /usr/local/aspen-discovery/code/web/cron/updateNYTLists.php test.localhostaspen
+15 7 * * 0-1 php /usr/local/aspen-discovery/code/web/cron/updateNYTLists.php test.localhostaspen
 # update on Sundays and Mondays at 7:15
 
 ###########################
@@ -51,35 +51,44 @@
 ###########################
 
 # Temp files
-26 0 * * *    root    cd /tmp; rm -rf CURLCOOKIE*
+26 0 * * * cd /tmp; rm -rf CURLCOOKIE*
 
 # CRON for Aspen (book cover cache cleanup etc.)
-00 22 * * *   aspen   cd /usr/local/aspen-discovery/code/cron; java -jar cron.jar test.localhostaspen
-
-00 01 * * *   root    certbot renew
+00 22 * * * cd /usr/local/aspen-discovery/code/cron; java -jar cron.jar test.localhostaspen
+00 01 * * *  certbot renew
 
 ############################
 # Fix Cover Permissions    #
 ############################
-*/15 * * * * root chown aspen:aspen_apache /data/aspen-discovery/test.localhostaspen/covers/original/*
-*/15 * * * * root chmod g+rw /data/aspen-discovery/test.localhostaspen/covers/original/*
+*/15 * * * * chown aspen:aspen_apache /data/aspen-discovery/test.localhostaspen/covers/original/*
+*/15 * * * * chmod g+rw /data/aspen-discovery/test.localhostaspen/covers/original/*
 
 #############################
 # Refresh SAML SSO metadata #
 #############################
-00 05  * * * www-data php /usr/local/aspen-discovery/code/web/cron/refreshSsoMetadata.php test.localhostaspen
+00 05  * * * php /usr/local/aspen-discovery/code/web/cron/refreshSsoMetadata.php test.localhostaspen
 
 #########################
 # Fetch Notification Receipts #
 #########################
-0 11 * * 1-5    aspen php /usr/local/aspen-discovery/code/web/cron/fetchNotificationReceipts.php test.localhostaspen
+0 11 * * 1-5 php /usr/local/aspen-discovery/code/web/cron/fetchNotificationReceipts.php test.localhostaspen
 
 #########################
 # Update Saved Searches #
 #########################
-0 10 * * 1-5    aspen php /usr/local/aspen-discovery/code/web/cron/updateSavedSearches.php test.localhostaspen
+0 10 * * 1-5 php /usr/local/aspen-discovery/code/web/cron/updateSavedSearches.php test.localhostaspen
 
 #########################
 # Send Custom LiDA Notifications #
 #########################
-*/15 * * * * aspen php /usr/local/aspen-discovery/code/web/cron/sendLiDANotifications.php test.localhostaspen
+*/15 * * * * php /usr/local/aspen-discovery/code/web/cron/sendLiDANotifications.php test.localhostaspen
+
+
+#########################
+# TEST RUNNING KOHA EXPORT #
+#########################
+
+*/2 * * * * su aspen -c "cd /usr/local/aspen-discovery/code/koha_export && java -jar koha_export.jar test.localhostaspen";
+*/1 * * * * /bin/echo -e "cron working" >> /var/log/aspen-discovery/test.localhostaspen/cron.log;
+*/1 * * * * su aspen -c "cd /usr/local/aspen-discovery/sites/test.localhostaspen && ./test.localhostaspen.sh start";
+
